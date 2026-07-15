@@ -1,11 +1,31 @@
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import { supabase } from "@/lib/supabase";
+import RootRoute from "@/root-route";
 
 export default function App() {
-  return (
-    <div className="p-4">
-      <h1 className="text-2xl">한입 로그 코드 템플릿</h1>
-      <Button>버튼 테스트</Button>
-      <Button variant={"destructive"}>버튼 테스트</Button>
-    </div>
-  );
+  return <RootRoute />;
 }
+
+// export default function App() {
+//   const [todos, setTodos] = useState([])
+
+//   useEffect(() => {
+//     async function getTodos() {
+//       const { data: todos } = await supabase.from('todos').select()
+
+//       if (todos) {
+//         setTodos(todos)
+//       }
+//     }
+
+//     getTodos()
+//   }, [])
+
+//   return (
+//     <ul>
+//       {todos.map((todo) => (
+//         <li key={todo.id}>{todo.name}</li>
+//       ))}
+//     </ul>
+//   )
+// }
