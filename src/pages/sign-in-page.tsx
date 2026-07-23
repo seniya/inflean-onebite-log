@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useSignInWithPassword } from "@/hooks/mutations/use-sign-in-with-password";
+import { useSignInWithPassword } from "@/hooks/mutations/auth/use-sign-in-with-password";
 
 import { useState } from "react";
 import { Link } from "react-router";
 import { toast } from "sonner";
 
 import gitHubLogo from "@/assets/github-mark.svg";
-import { useSignInWithOauth } from "@/hooks/mutations/use-sign-in-with-oauth";
+import { useSignInWithOauth } from "@/hooks/mutations/auth/use-sign-in-with-oauth";
 import { generateErrorMessage } from "@/lib/error";
 
 export default function SignInPage() {
