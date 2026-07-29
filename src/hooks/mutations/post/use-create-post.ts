@@ -21,9 +21,6 @@ export function useCreatePost(callbacks?: UseMutationCallback) {
       // 3. 낙관적 업데이트 방식(onMutate)
     },
     onError: (error) => {
-      console.error(error);
-      // window.alert(error);
-
       if (callbacks?.onError) callbacks.onError(error);
     },
   });
